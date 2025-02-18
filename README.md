@@ -72,8 +72,7 @@ Agar Multiple Columns Par Index Lagana Ho?
 
 Agar ek se zyada columns par index banana ho toh syntax yeh hoga:
 
-
-CREATE INDEX idx_patient_details ON HealthCare (Patient_Name, Gender, Medical_Condition);
+    CREATE INDEX idx_patient_details ON HealthCare (Patient_Name, Gender, Medical_Condition);
 
 ✔ Yeh Composite Index hai jo Patient_Name, Gender, aur Medical_Condition ko ek saath optimize karega.
 
