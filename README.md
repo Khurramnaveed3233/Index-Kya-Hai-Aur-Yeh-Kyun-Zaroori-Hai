@@ -55,7 +55,9 @@ Basic Index Lagane Ka Syntax
     CREATE INDEX index_name ON table_name (column_name);
 
 👉 index_name = Index ka naam (jo hum khud rakh sakte hain).
+
 👉 table_name = Table jisme index lagana hai.
+
 👉 column_name = Wo column jisme fast searching chahiye.
 
 Example: HealthCare Table Par Index Lagana
