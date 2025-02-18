@@ -48,6 +48,37 @@ Agar hum ORDER BY bhi lagayen toh wo bhi tez ho jayega
 
     SELECT * FROM HealthCare ORDER BY Patient_Name;
 
+Index ka Syntax : 
+
+Basic Index Lagane Ka Syntax
+
+    CREATE INDEX index_name ON table_name (column_name);
+
+👉 index_name = Index ka naam (jo hum khud rakh sakte hain).
+👉 table_name = Table jisme index lagana hai.
+👉 column_name = Wo column jisme fast searching chahiye.
+
+Example: HealthCare Table Par Index Lagana
+
+    CREATE INDEX idx_patient_name ON HealthCare (Patient_Name);
+
+Iska Matlab:
+
+✔ Patient_Name column par ek index idx_patient_name naam se create hoga.
+
+✔ Ab jab bhi hum Patient_Name ke basis par search karenge, toh query bohot fast chalegi.
+
+Agar Multiple Columns Par Index Lagana Ho?
+
+Agar ek se zyada columns par index banana ho toh syntax yeh hoga:
+
+
+CREATE INDEX idx_patient_details ON HealthCare (Patient_Name, Gender, Medical_Condition);
+
+✔ Yeh Composite Index hai jo Patient_Name, Gender, aur Medical_Condition ko ek saath optimize karega.
+
+✔ Queries jisme yeh teeno columns hon zyada fast chalengi.
+
 Final Conclusion
 
 ✔ Index ek shortcut hota hai jo searching ko fast karta hai.
