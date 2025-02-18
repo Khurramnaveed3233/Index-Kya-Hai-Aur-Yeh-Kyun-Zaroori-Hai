@@ -51,9 +51,13 @@ Agar hum ORDER BY bhi lagayen toh wo bhi tez ho jayega
 Final Conclusion
 
 ✔ Index ek shortcut hota hai jo searching ko fast karta hai.
+
 ✔ Agar bohot zyada records hain, toh index query ko slow hone se bachata hai.
+
 ✔ Index bina query slow chalti hai, magar index hone se wo instant result de sakti hai.
+
 ✔ Har column par index lagana zaroori nahi, sirf un columns par lagao jo zyada search hote hain.
+
 
 💡 Yaad rakhna: Zyada indexes lagane se insert/update queries slow ho sakti hain, toh sirf zaroori jagah index lagana!
 
