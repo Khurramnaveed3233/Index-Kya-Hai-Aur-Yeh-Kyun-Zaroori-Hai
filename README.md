@@ -93,7 +93,75 @@ Final Conclusion
 
 💡 Yaad rakhna: Zyada indexes lagane se insert/update queries slow ho sakti hain, toh sirf zaroori jagah index lagana!
 
+# Clustered vs Non-Clustered Index – Asaan Alfaaz Mein Samjhayein
 
+Indexes database mein searching aur query speed ko improve karne ke liye use hote hain. Indexes do types ke hote hain:
+
+1️⃣ Clustered Index
+2️⃣ Non-Clustered Index
+
+1️⃣ Clustered Index Kya Hota Hai?
+
+✔ Clustered index data ko physically sort kar deta hai.
+✔ Table ke rows ka actual order change ho jata hai aur woh index ke mutabiq arrange ho jati hain.
+✔ Ek table mein sirf ek clustered index hota hai.
+
+Example:
+Socho ek bari kitab hai jisme pages ka order random hai, aur tumhe Chapter 5 dhoondhna hai.
+Agar Clustered Index laga diya jaye, toh puri kitab proper order mein arrange ho jayegi aur tum direct Chapter 5 tak pohanch sakte ho! ✅
+
+Clustered Index Banane Ka Syntax:
+
+    CREATE CLUSTERED INDEX idx_patient_id ON HealthCare (Patient_ID);
+
+✔ Yeh Patient_ID ke mutabiq table ko physically sort kar dega.
+✔ Jab bhi tum Patient_ID se search karoge, query bohot fast chalegi.
+
+Clustered Index Ke Key Points:
+
+✅ Data physically sort hota hai.
+✅ Ek table mein sirf ek clustered index ho sakta hai.
+✅ Primary Key by default clustered index hoti hai.
+
+2️⃣ Non-Clustered Index Kya Hota Hai?
+
+✔ Non-clustered index sirf ek lookup table hota hai, jo actual data ka reference rakhta hai.
+✔ Data ka order physically change nahi hota, sirf ek shortcut list ban jati hai.
+✔ Ek table me multiple non-clustered indexes ho sakte hain.
+
+Example:
+
+Maan lo tum ek library me gaye ho aur librarian ke paas index book hai jo batati hai ke kaunsi kitaab kis shelf pe hai.
+Non-clustered index bilkul isi tarah kaam karta hai! 🏛
+
+Non-Clustered Index Banane Ka Syntax:
+
+    CREATE NONCLUSTERED INDEX idx_patient_name ON HealthCare (Patient_Name);
+
+✔ Yeh Patient_Name ke mutabiq ek lookup table banayega.
+✔ Jab hum Patient_Name se search karenge, pehle index check hoga, phir actual data fetch hoga.
+
+Non-Clustered Index Ke Key Points:
+
+✅ Data physically move nahi hota, sirf ek shortcut list banti hai.
+
+✅ Multiple non-clustered indexes ek table par ho sakte hain.
+
+✅ Jo queries frequently search hoti hain, unpar non-clustered index lagana acha hota hai.
+
+![121](https://github.com/user-attachments/assets/89225a78-c218-4c94-b907-c7f6cfb1fb21)
+
+Final Conclusion
+
+✔ Clustered Index poori table ko physically sort kar deta hai, aur sirf ek baar apply ho sakta hai.
+
+✔ Non-Clustered Index ek shortcut list banata hai, aur multiple baar apply ho sakta hai.
+
+✔ Primary key automatically clustered index hoti hai.
+
+✔ Frequently searched columns par non-clustered index lagana acha hota hai.
+
+Agar aur koi confusion hai toh batao! 😊
 
 
 
