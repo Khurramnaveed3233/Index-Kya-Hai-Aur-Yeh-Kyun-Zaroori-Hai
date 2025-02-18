@@ -120,13 +120,17 @@ Clustered Index Banane Ka Syntax:
 Clustered Index Ke Key Points:
 
 ✅ Data physically sort hota hai.
+
 ✅ Ek table mein sirf ek clustered index ho sakta hai.
+
 ✅ Primary Key by default clustered index hoti hai.
 
 2️⃣ Non-Clustered Index Kya Hota Hai?
 
 ✔ Non-clustered index sirf ek lookup table hota hai, jo actual data ka reference rakhta hai.
+
 ✔ Data ka order physically change nahi hota, sirf ek shortcut list ban jati hai.
+
 ✔ Ek table me multiple non-clustered indexes ho sakte hain.
 
 Example:
@@ -139,6 +143,7 @@ Non-Clustered Index Banane Ka Syntax:
     CREATE NONCLUSTERED INDEX idx_patient_name ON HealthCare (Patient_Name);
 
 ✔ Yeh Patient_Name ke mutabiq ek lookup table banayega.
+
 ✔ Jab hum Patient_Name se search karenge, pehle index check hoga, phir actual data fetch hoga.
 
 Non-Clustered Index Ke Key Points:
