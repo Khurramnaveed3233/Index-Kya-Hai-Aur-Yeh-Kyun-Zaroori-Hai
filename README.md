@@ -98,17 +98,20 @@ Final Conclusion
 Indexes database mein searching aur query speed ko improve karne ke liye use hote hain. Indexes do types ke hote hain:
 
 1️⃣ Clustered Index
+
 2️⃣ Non-Clustered Index
 
 1️⃣ Clustered Index Kya Hota Hai?
 
 ✔ Clustered index data ko physically sort kar deta hai.
+
 ✔ Table ke rows ka actual order change ho jata hai aur woh index ke mutabiq arrange ho jati hain.
+
 ✔ Ek table mein sirf ek clustered index hota hai.
 
 Example:
 Socho ek bari kitab hai jisme pages ka order random hai, aur tumhe Chapter 5 dhoondhna hai.
-Agar Clustered Index laga diya jaye, toh puri kitab proper order mein arrange ho jayegi aur tum direct Chapter 5 tak pohanch sakte ho! ✅
+Agar Clustered Index laga diya jaye, toh puri kitab proper order mein arrange ho jayegi aur tum direct Chapter 5 tak pohanch sakte ho
 
 Clustered Index Banane Ka Syntax:
 
